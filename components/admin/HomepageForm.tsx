@@ -1009,7 +1009,7 @@ export default function HomepageForm({ initial, tours }: { initial: HomepageCont
                 )}
               </div>
               <div className="bg-stone-50 p-3">
-                <p className="truncate text-xs uppercase tracking-wide text-stone-400">bookchichenitzatour.com</p>
+                <p className="truncate text-xs uppercase tracking-wide text-stone-400">siamparktickets.com</p>
                 <p className="mt-0.5 truncate text-sm font-semibold text-stone-900">{content.ogTitle || content.metaTitle || content.heroHeading}</p>
                 <p className="mt-0.5 line-clamp-2 text-xs text-stone-500">{(content.ogDescription || content.metaDescription || content.heroSubheading).replace(/<[^>]+>/g, "")}</p>
               </div>

@@ -261,7 +261,7 @@ export default function PostForm({
                       update("slug", slugify(e.target.value));
                     }}
                     className={`${inputClass} ${slugChanged ? "border-amber-400 bg-amber-50" : ""}`}
-                    placeholder="best-time-to-visit-chichen-itza"
+                    placeholder="best-time-to-visit-siam-park"
                   />
                 </Field>
                 <Field label="Category">

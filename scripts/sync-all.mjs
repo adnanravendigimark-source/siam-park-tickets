@@ -55,7 +55,7 @@ async function syncAll() {
         featured_badge_label, featured_urgency_text, featured_reasons
       ) VALUES (
         1, ${h.heroBadge || ""}, ${h.heroHeading || ""}, ${h.heroSubheading || ""},
-        ${h.heroImage || "/images/chichen-itza-hero.jpg"}, ${h.heroImageAlt || ""},
+        ${h.heroImage || "https://images.unsplash.com/photo-1642717841683-c0323214617c?q=80&w=2400&auto=format&fit=crop"}, ${h.heroImageAlt || ""},
         ${h.ratingValue || ""}, ${h.ratingCount || ""}, ${!!h.showFeaturedTour},
         ${h.featuredTourId || ""}, ${h.featuredBadgeLabel || ""}, ${h.featuredUrgencyText || ""},
         ${JSON.stringify(h.featuredReasons || [])}::jsonb

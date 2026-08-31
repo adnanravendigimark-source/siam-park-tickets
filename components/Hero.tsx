@@ -3,7 +3,7 @@ import { getHomepageContent } from "@/lib/homepage";
 
 export default async function Hero() {
   const content = await getHomepageContent();
-  const heroImageSrc = content.heroImage || "/images/siam-park-hero.jpg";
+  const heroImageSrc = content.heroImage || "https://images.unsplash.com/photo-1642717841683-c0323214617c?q=80&w=2400&auto=format&fit=crop";
 
   return (
     <section className="relative w-full min-h-screen min-h-[100dvh] flex flex-col justify-center bg-[#F5FAF9] overflow-hidden">

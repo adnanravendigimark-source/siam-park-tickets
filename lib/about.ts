@@ -39,7 +39,7 @@ const DEFAULT_ABOUT: AboutPageContent = {
   heroHeading: "Your Independent Guide to Siam Park Tickets",
   heroSubheading:
     "We help travelers discover and book the best Siam Park tickets — from standard general admission to all-inclusive fast-track passes and twin tickets with Loro Parque.",
-  heroImage: "https://images.unsplash.com/photo-1544966503-7ba532bcf162?q=80&w=2000&auto=format&fit=crop",
+  heroImage: "https://images.unsplash.com/photo-1642717841683-c0323214617c?q=80&w=2000&auto=format&fit=crop",
   heroImageAlt: "Wave Palace, the world's largest artificial wave, at Siam Park",
   content: DEFAULT_CONTENT,
   metaTitle: "About Us | Siam Park Ticket Booking Guide",

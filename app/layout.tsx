@@ -23,7 +23,7 @@ const scriptFont = Alex_Brush({
 });
 
 const DEFAULT_OG_IMAGE =
-  "https://images.unsplash.com/photo-1544966503-7ba532bcf162?q=80&w=2400&auto=format&fit=crop";
+  "https://images.unsplash.com/photo-1642717841683-c0323214617c?q=80&w=2400&auto=format&fit=crop";
 
 // Google Analytics (GA4) measurement ID — PLACEHOLDER. Replace with this
 // site's own GA4 property ID before launch. Do not reuse another site's

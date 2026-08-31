@@ -358,22 +358,22 @@ export const DEFAULT_SECTIONS: HomepageSections = {
     ctaHref: "#tours",
     images: [
       {
-        src: "/images/tower-of-power.jpg",
+        src: "https://images.unsplash.com/photo-1633493093121-b2f8ac4b2b05?q=80&w=1200&auto=format&fit=crop",
         alt: "Tower of Power, Siam Park's signature 28-metre water slide",
         label: "Tower of Power",
       },
       {
-        src: "/images/wave-palace.jpg",
+        src: "https://images.unsplash.com/photo-1642717841683-c0323214617c?q=80&w=1200&auto=format&fit=crop",
         alt: "Wave Palace, the world's largest artificial wave at Siam Park",
         label: "Wave Palace",
       },
       {
-        src: "/images/mai-thai-river.jpg",
+        src: "https://images.unsplash.com/photo-1775807319100-caeac311698f?q=80&w=1200&auto=format&fit=crop",
         alt: "Mai Thai River winding past tropical gardens at Siam Park",
         label: "Mai Thai River",
       },
       {
-        src: "/images/lost-city.jpg",
+        src: "https://images.unsplash.com/photo-1507445308359-ee4c04611197?q=80&w=1200&auto=format&fit=crop",
         alt: "The Lost City family play area at Siam Park",
         label: "The Lost City",
       },
@@ -459,7 +459,7 @@ const DEFAULT_HOMEPAGE_CONTENT: HomepageContent = {
   heroHeading: "Siam Park Tickets",
   heroSubheading:
     "Book your ticket to Siam Park — the world's best water park — with instant mobile confirmation and free cancellation up to 24 hours before your visit.",
-  heroImage: "/images/siam-park-hero.jpg",
+  heroImage: "https://images.unsplash.com/photo-1642717841683-c0323214617c?q=80&w=2400&auto=format&fit=crop",
   heroImageAlt: "Guests riding Wave Palace, the world's largest artificial wave, at Siam Park Tenerife",
   heroCtaPrimaryText: "EXPLORE TICKETS",
   heroCtaPrimaryHref: "#tours",
