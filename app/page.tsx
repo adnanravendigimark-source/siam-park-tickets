@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import FeaturedTour from "@/components/FeaturedTour";
 import TourGrid from "@/components/TourGrid";
 import WhatYouSee from "@/components/WhatYouSee";
 import WhyBookWithUs from "@/components/WhyBookWithUs";
@@ -80,6 +81,7 @@ export default async function HomePage() {
       <Header />
       <main>
         <Hero />
+        <FeaturedTour />
         <TourGrid />
         <WhatYouSee />
         <WhyBookWithUs />
@@ -89,6 +91,7 @@ export default async function HomePage() {
         <BlogSection />
         <FAQSection />
         <CtaBanner />
+        <div className="h-20 sm:hidden" aria-hidden="true" />
       </main>
       <Footer />
       {productJsonLd.map((data, i) => (

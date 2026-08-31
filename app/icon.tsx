@@ -13,44 +13,46 @@ export default function Icon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "linear-gradient(135deg, #0A3D42 0%, #042017 100%)",
-          borderRadius: "14px",
-          border: "2.5px solid #F0A93A",
+          background: "linear-gradient(135deg, #07575B 0%, #042022 100%)",
+          borderRadius: "16px",
+          border: "2.5px solid #E8B84A",
           boxSizing: "border-box",
         }}
       >
         <svg
-          width="54"
-          height="54"
+          width="52"
+          height="52"
           viewBox="0 0 64 64"
           fill="none"
         >
-          {/* Sun Radiance */}
-          <circle cx="32" cy="18" r="9" fill="#F0A93A" fillOpacity="0.25" />
-          <path d="M32 6V9M24 8L25.5 11M40 8L38.5 11M17 13L20 15M47 13L44 15" stroke="#F0A93A" strokeWidth="1.5" strokeLinecap="round" />
+          {/* Sun Halo */}
+          <circle cx="32" cy="24" r="14" fill="#E8B84A" fillOpacity="0.25" />
 
-          {/* Temple Summit Chamber */}
-          <rect x="27" y="18" width="10" height="6" rx="0.5" fill="#F0A93A" stroke="#F0A93A" strokeWidth="1" />
-          <rect x="30" y="20" width="4" height="4" fill="#0A3D42" />
+          {/* Thai Dragon Crest */}
+          <path
+            d="M32 8C33.5 12 37 14 36 18C35.2 21.2 38 23 37 26C35.5 30.5 30 29 29.5 25C29.2 22.5 31.5 21 31 18C30.5 15 28 13.5 32 8Z"
+            fill="#F15A24"
+          />
+          <path
+            d="M32 11C33 14 35 15.5 34.5 18C34 20 35.5 21.5 35 23.5C34 26 31 25.5 30.8 23C30.5 21.5 31.8 20.5 31.5 18.5C31.2 16.5 29.5 15 32 11Z"
+            fill="#E8B84A"
+          />
 
-          {/* Terraced Stepped Pyramid Tiers */}
-          <path d="M23 24L20 29H44L41 24H23Z" fill="#F0A93A" fillOpacity="0.45" stroke="#F0A93A" strokeWidth="1.2" />
-          <path d="M19 29L16 35H48L45 29H19Z" fill="#F0A93A" fillOpacity="0.6" stroke="#F0A93A" strokeWidth="1.2" />
-          <path d="M15 35L11 42H53L49 35H15Z" fill="#F0A93A" fillOpacity="0.75" stroke="#F0A93A" strokeWidth="1.2" />
-          <path d="M10 42L6 50H58L54 42H10Z" fill="#F0A93A" stroke="#F0A93A" strokeWidth="1.4" />
-
-          {/* Central Grand Ceremonial Staircase */}
-          <path d="M28 24L26 50H38L36 24H28Z" fill="#F0A93A" stroke="#0A3D42" strokeWidth="1.2" />
-          <line x1="27.5" y1="29" x2="36.5" y2="29" stroke="#0A3D42" strokeWidth="1" />
-          <line x1="27" y1="34" x2="37" y2="34" stroke="#0A3D42" strokeWidth="1" />
-          <line x1="26.5" y1="39" x2="37.5" y2="39" stroke="#0A3D42" strokeWidth="1" />
-          <line x1="26" y1="44" x2="38" y2="44" stroke="#0A3D42" strokeWidth="1" />
-
-          {/* Base Ground Line */}
-          <path d="M4 51H60" stroke="#F0A93A" strokeWidth="2.5" strokeLinecap="round" />
+          {/* Ocean Wave */}
+          <path
+            d="M10 42C16 34 24 38 32 32C40 26 48 36 54 30V48C54 52 50 54 46 54H18C14 54 10 52 10 48V42Z"
+            fill="#08A6A6"
+          />
+          <path
+            d="M12 40C18 33 26 37 34 31C42 25 50 35 54 29"
+            stroke="#E3F5F3"
+            strokeWidth="2"
+            strokeLinecap="round"
+          />
         </svg>
       </div>
     ),
     { ...size }
   );
 }
+
