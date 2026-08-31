@@ -20,7 +20,9 @@ import type {
   HoursRow,
   GalleryImage,
   HighlightCard,
+  HeroSection,
 } from "@/lib/homepage";
+import { DEFAULT_HERO_SECTION } from "@/lib/homepage";
 import type { Tour } from "@/lib/data";
 
 const inputClass =
@@ -180,6 +182,20 @@ export default function HomepageForm({ initial, tours }: { initial: HomepageCont
 
   function updateTheme(patch: Partial<HomepageContent["theme"]>) {
     setContent((c) => ({ ...c, theme: { ...c.theme, ...patch } }));
+    setSaved(false);
+  }
+
+  function updateHeroSection(patch: Partial<HeroSection>) {
+    setContent((c) => ({
+      ...c,
+      sections: {
+        ...c.sections,
+        hero: {
+          ...(c.sections?.hero || DEFAULT_HERO_SECTION),
+          ...patch,
+        },
+      },
+    }));
     setSaved(false);
   }
 
@@ -407,6 +423,13 @@ export default function HomepageForm({ initial, tours }: { initial: HomepageCont
             <Field label="Hero subheading">
               <RichTextEditor value={content.heroSubheading} onChange={(html) => update("heroSubheading", html)} minHeight="4rem" />
             </Field>
+            <Field label="Hero tagline (bold line below the headline & script)">
+              <input
+                value={content.sections?.hero?.tagline ?? "Feel the Thrill. Live the Adventure."}
+                onChange={(e) => updateHeroSection({ tagline: e.target.value })}
+                className={inputClass}
+              />
+            </Field>
             <div className="grid gap-5 sm:grid-cols-2">
               <Field label="Primary button text">
                 <input value={content.heroCtaPrimaryText} onChange={(e) => update("heroCtaPrimaryText", e.target.value)} className={inputClass} />
@@ -420,6 +443,105 @@ export default function HomepageForm({ initial, tours }: { initial: HomepageCont
               <Field label="Secondary button link">
                 <input value={content.heroCtaSecondaryHref} onChange={(e) => update("heroCtaSecondaryHref", e.target.value)} className={inputClass} />
               </Field>
+            </div>
+
+            <div className="border-t border-stone-200 pt-5">
+              <p className="font-semibold text-stone-900 mb-1">Hero Trust Badges (4 Badges)</p>
+              <p className="text-xs text-stone-500 mb-4">Edit the 4 circular guarantee badges displayed at the bottom of the hero section.</p>
+
+              <div className="grid gap-4 sm:grid-cols-2">
+                {/* Badge 1: Best Price Guarantee */}
+                <div className="rounded-xl border border-stone-200 bg-stone-50/70 p-4">
+                  <span className="mb-2.5 block text-xs font-bold uppercase tracking-wider text-[#F15A24]">
+                    Badge 1 (e.g. Best Price Guarantee)
+                  </span>
+                  <div className="space-y-3">
+                    <Field label="Line 1 (Heading)">
+                      <input
+                        value={content.sections?.hero?.badge1Line1 ?? "Best Price"}
+                        onChange={(e) => updateHeroSection({ badge1Line1: e.target.value })}
+                        className={inputClass}
+                      />
+                    </Field>
+                    <Field label="Line 2 (Subtext)">
+                      <input
+                        value={content.sections?.hero?.badge1Line2 ?? "Guarantee"}
+                        onChange={(e) => updateHeroSection({ badge1Line2: e.target.value })}
+                        className={inputClass}
+                      />
+                    </Field>
+                  </div>
+                </div>
+
+                {/* Badge 2: Instant E-Tickets */}
+                <div className="rounded-xl border border-stone-200 bg-stone-50/70 p-4">
+                  <span className="mb-2.5 block text-xs font-bold uppercase tracking-wider text-[#08A6A6]">
+                    Badge 2 (e.g. Instant E-Tickets)
+                  </span>
+                  <div className="space-y-3">
+                    <Field label="Line 1 (Heading)">
+                      <input
+                        value={content.sections?.hero?.badge2Line1 ?? "Instant"}
+                        onChange={(e) => updateHeroSection({ badge2Line1: e.target.value })}
+                        className={inputClass}
+                      />
+                    </Field>
+                    <Field label="Line 2 (Subtext)">
+                      <input
+                        value={content.sections?.hero?.badge2Line2 ?? "E-Tickets"}
+                        onChange={(e) => updateHeroSection({ badge2Line2: e.target.value })}
+                        className={inputClass}
+                      />
+                    </Field>
+                  </div>
+                </div>
+
+                {/* Badge 3: Skip the Line Entry */}
+                <div className="rounded-xl border border-stone-200 bg-stone-50/70 p-4">
+                  <span className="mb-2.5 block text-xs font-bold uppercase tracking-wider text-[#07575B]">
+                    Badge 3 (e.g. Skip the Line Entry)
+                  </span>
+                  <div className="space-y-3">
+                    <Field label="Line 1 (Heading)">
+                      <input
+                        value={content.sections?.hero?.badge3Line1 ?? "Skip the Line"}
+                        onChange={(e) => updateHeroSection({ badge3Line1: e.target.value })}
+                        className={inputClass}
+                      />
+                    </Field>
+                    <Field label="Line 2 (Subtext)">
+                      <input
+                        value={content.sections?.hero?.badge3Line2 ?? "Entry"}
+                        onChange={(e) => updateHeroSection({ badge3Line2: e.target.value })}
+                        className={inputClass}
+                      />
+                    </Field>
+                  </div>
+                </div>
+
+                {/* Badge 4: 24/7 Customer Support */}
+                <div className="rounded-xl border border-stone-200 bg-stone-50/70 p-4">
+                  <span className="mb-2.5 block text-xs font-bold uppercase tracking-wider text-[#3D8B40]">
+                    Badge 4 (e.g. 24/7 Customer Support)
+                  </span>
+                  <div className="space-y-3">
+                    <Field label="Line 1 (Heading)">
+                      <input
+                        value={content.sections?.hero?.badge4Line1 ?? "24/7 Customer"}
+                        onChange={(e) => updateHeroSection({ badge4Line1: e.target.value })}
+                        className={inputClass}
+                      />
+                    </Field>
+                    <Field label="Line 2 (Subtext)">
+                      <input
+                        value={content.sections?.hero?.badge4Line2 ?? "Support"}
+                        onChange={(e) => updateHeroSection({ badge4Line2: e.target.value })}
+                        className={inputClass}
+                      />
+                    </Field>
+                  </div>
+                </div>
+              </div>
             </div>
           </SectionCard>
 

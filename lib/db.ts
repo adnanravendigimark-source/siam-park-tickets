@@ -12,26 +12,28 @@ import { neon } from "@neondatabase/serverless";
 // fails soft and falls back to the real starter content baked into /data
 // (see lib/data.ts, lib/posts.ts, lib/homepage.ts, lib/legal.ts) — writes
 // from /admin will show DB_ERROR_MESSAGE until DATABASE_URL is configured.
-if (!process.env.DATABASE_URL) {
-  console.warn(
-    "[db] DATABASE_URL is not set — reads fall back to the starter content in /data, and every content write will fail until it's configured."
-  );
+type NeonClient = ReturnType<typeof neon<false, false>>;
+
+let client: NeonClient | null = null;
+
+try {
+  const dbUrl = process.env.DATABASE_URL?.trim();
+  if (dbUrl && (dbUrl.startsWith("postgres://") || dbUrl.startsWith("postgresql://"))) {
+    client = neon<false, false>(dbUrl, {
+      fetchOptions: { cache: "no-store" },
+    });
+  }
+} catch (e) {
+  console.warn("[db] Failed to initialize Neon client:", e);
 }
 
-// IMPORTANT: neon()'s HTTP driver executes every query as an internal
-// fetch() call. Next.js's App Router automatically caches server-side
-// fetch() calls unless a call explicitly opts out — and neon's internal
-// fetch doesn't do that on its own. Without `fetchOptions: { cache:
-// "no-store" }` here, Next.js can silently cache the *database query
-// responses themselves*: a write (INSERT/UPDATE) still reaches Neon and
-// succeeds, but a subsequent read can be served from Next.js's cached
-// copy of an *older* query response instead of hitting Neon again — so
-// admin saves report success but the "new" content never appears, no
-// matter how many browser/CDN/router caching layers are disabled (this
-// bit is a distinct, server-internal cache those don't touch at all).
-export const sql = neon(process.env.DATABASE_URL || "postgres://unset", {
-  fetchOptions: { cache: "no-store" },
-});
+// Fallback executor that returns a rejected Promise for any query if DATABASE_URL is unset/invalid.
+// This allows all caller try/catch blocks to gracefully fall back to default JSON data without crashing the app.
+const fallbackSql: any = () => {
+  return Promise.reject(new Error("DATABASE_URL is not set or invalid."));
+};
+
+export const sql: NeonClient = (client || fallbackSql) as NeonClient;
 
 // Shown to the admin (instead of a raw crash) when a save fails because
 // the database couldn't be reached or rejected the query — e.g. DATABASE_URL

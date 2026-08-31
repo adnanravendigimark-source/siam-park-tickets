@@ -140,6 +140,18 @@ export interface BlogPageSection {
   promoRecommendedText: string;
 }
 
+export interface HeroSection {
+  tagline: string;
+  badge1Line1: string;
+  badge1Line2: string;
+  badge2Line1: string;
+  badge2Line2: string;
+  badge3Line1: string;
+  badge3Line2: string;
+  badge4Line1: string;
+  badge4Line2: string;
+}
+
 export interface CtaBannerSection {
   heading: string;
   subtext: string;
@@ -148,6 +160,7 @@ export interface CtaBannerSection {
 }
 
 export interface HomepageSections {
+  hero: HeroSection;
   tours: TourSection;
   highlights: HighlightsSection;
   why: WhySection;
@@ -273,7 +286,20 @@ export const DEFAULT_THEME: ThemeColors = {
   accent: "#E8B84A",    // Golden Sand
 };
 
+export const DEFAULT_HERO_SECTION: HeroSection = {
+  tagline: "Feel the Thrill. Live the Adventure.",
+  badge1Line1: "Best Price",
+  badge1Line2: "Guarantee",
+  badge2Line1: "Instant",
+  badge2Line2: "E-Tickets",
+  badge3Line1: "Skip the Line",
+  badge3Line2: "Entry",
+  badge4Line1: "24/7 Customer",
+  badge4Line2: "Support",
+};
+
 export const DEFAULT_SECTIONS: HomepageSections = {
+  hero: DEFAULT_HERO_SECTION,
   tours: {
     eyebrow: "Siam Park Tickets",
     heading: "Siam Park Tickets & Fast-Track Passes",
@@ -530,6 +556,7 @@ function rowToHomepage(row: any): HomepageContent {
     featuredUrgencyText: row.featured_urgency_text || "",
     featuredReasons: parseReasons(row.featured_reasons),
     sections: {
+      hero: { ...DEFAULT_SECTIONS.hero, ...(sectionsRaw.hero || {}) },
       tours: { ...DEFAULT_SECTIONS.tours, ...sectionsRaw.tours },
       highlights: { ...DEFAULT_SECTIONS.highlights, ...sectionsRaw.highlights },
       why: { ...DEFAULT_SECTIONS.why, ...sectionsRaw.why },

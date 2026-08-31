@@ -14,6 +14,18 @@ export default async function Hero() {
     ? "THE WORLD'S BEST WATER PARK"
     : content.heroBadge;
 
+  const heroSection = content.sections?.hero || {
+    tagline: "Feel the Thrill. Live the Adventure.",
+    badge1Line1: "Best Price",
+    badge1Line2: "Guarantee",
+    badge2Line1: "Instant",
+    badge2Line2: "E-Tickets",
+    badge3Line1: "Skip the Line",
+    badge3Line2: "Entry",
+    badge4Line1: "24/7 Customer",
+    badge4Line2: "Support",
+  };
+
   return (
     <section className="relative w-full min-h-[90vh] flex flex-col justify-between bg-white overflow-hidden pt-20 sm:pt-24 pb-0">
       {/* Full-bleed Panoramic Background Image */}
@@ -60,7 +72,7 @@ export default async function Hero() {
 
           {/* Subtitle Line */}
           <p className="mt-3.5 sm:mt-4 text-xl sm:text-2xl font-bold text-[#102A43]">
-            Feel the Thrill. Live the Adventure.
+            {heroSection.tagline || "Feel the Thrill. Live the Adventure."}
           </p>
 
           {/* Subtitle / Description */}
@@ -111,8 +123,8 @@ export default async function Hero() {
                 </svg>
               </span>
               <div className="leading-tight">
-                <span className="block font-bold">Best Price</span>
-                <span className="block text-[11px] sm:text-xs text-[#102A43]/70 font-medium">Guarantee</span>
+                <span className="block font-bold">{heroSection.badge1Line1 || "Best Price"}</span>
+                <span className="block text-[11px] sm:text-xs text-[#102A43]/70 font-medium">{heroSection.badge1Line2 || "Guarantee"}</span>
               </div>
             </div>
 
@@ -125,8 +137,8 @@ export default async function Hero() {
                 </svg>
               </span>
               <div className="leading-tight">
-                <span className="block font-bold">Instant</span>
-                <span className="block text-[11px] sm:text-xs text-[#102A43]/70 font-medium">E-Tickets</span>
+                <span className="block font-bold">{heroSection.badge2Line1 || "Instant"}</span>
+                <span className="block text-[11px] sm:text-xs text-[#102A43]/70 font-medium">{heroSection.badge2Line2 || "E-Tickets"}</span>
               </div>
             </div>
 
@@ -139,8 +151,8 @@ export default async function Hero() {
                 </svg>
               </span>
               <div className="leading-tight">
-                <span className="block font-bold">Skip the Line</span>
-                <span className="block text-[11px] sm:text-xs text-[#102A43]/70 font-medium">Entry</span>
+                <span className="block font-bold">{heroSection.badge3Line1 || "Skip the Line"}</span>
+                <span className="block text-[11px] sm:text-xs text-[#102A43]/70 font-medium">{heroSection.badge3Line2 || "Entry"}</span>
               </div>
             </div>
 
@@ -153,8 +165,8 @@ export default async function Hero() {
                 </svg>
               </span>
               <div className="leading-tight">
-                <span className="block font-bold">24/7 Customer</span>
-                <span className="block text-[11px] sm:text-xs text-[#102A43]/70 font-medium">Support</span>
+                <span className="block font-bold">{heroSection.badge4Line1 || "24/7 Customer"}</span>
+                <span className="block text-[11px] sm:text-xs text-[#102A43]/70 font-medium">{heroSection.badge4Line2 || "Support"}</span>
               </div>
             </div>
           </div>
