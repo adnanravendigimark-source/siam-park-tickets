@@ -136,6 +136,8 @@ export default async function RootLayout({
         <link rel="preconnect" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+      </head>
+      <body className="font-body bg-stone-50 text-stone-900 antialiased">
         {/* Google tag (gtag.js) */}
         <Script
           async
@@ -150,8 +152,6 @@ export default async function RootLayout({
             gtag('config', '${GA_MEASUREMENT_ID}');
           `}
         </Script>
-      </head>
-      <body className="font-body bg-stone-50 text-stone-900 antialiased">
         {themeStyle && <style dangerouslySetInnerHTML={{ __html: themeStyle }} />}
         {children}
         <script

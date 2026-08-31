@@ -220,22 +220,19 @@ export interface HomepageContent {
 }
 
 export const DEFAULT_HEADER: HeaderContent = {
-  logoImage: "",
+  logoImage: "/images/siam-park-logo.png",
   logoAlt: "Siam Park Tickets",
   logoLine1: "SIAM PARK",
   logoLine2: "— TICKETS —",
   homeLabel: "Home",
-  bookNowText: "BOOK NOW",
+  bookNowText: "BOOK TICKETS",
   navLinks: [
     { label: "Home", href: "/" },
-    { label: "Tickets", href: "/#tours" },
-    { label: "What to Expect", href: "/#what-to-expect" },
-    { label: "Top Rides", href: "/#top-rides" },
-    { label: "Blog", href: "/blog" },
     { label: "About Us", href: "/about" },
+    { label: "Blog", href: "/blog" },
     { label: "Contact", href: "/contact" },
   ],
-  ctaText: "BOOK NOW",
+  ctaText: "BOOK TICKETS",
   ctaHref: "/#tours",
 };
 
@@ -455,16 +452,16 @@ export const DEFAULT_SECTIONS: HomepageSections = {
 };
 
 const DEFAULT_HOMEPAGE_CONTENT: HomepageContent = {
-  heroBadge: "TENERIFE'S #1 WATER PARK EXPERIENCE",
-  heroHeading: "Siam Park Tickets",
+  heroBadge: "THE WORLD'S BEST WATER PARK",
+  heroHeading: "Siam Park",
   heroSubheading:
-    "Book your ticket to Siam Park — the world's best water park — with instant mobile confirmation and free cancellation up to 24 hours before your visit.",
-  heroImage: "https://images.unsplash.com/photo-1642717841683-c0323214617c?q=80&w=2400&auto=format&fit=crop",
-  heroImageAlt: "Guests riding Wave Palace, the world's largest artificial wave, at Siam Park Tenerife",
-  heroCtaPrimaryText: "EXPLORE TICKETS",
+    "Book your Siam Park tickets online and enjoy a full day of unforgettable fun at Tenerife's award-winning water park.",
+  heroImage: "/images/siam-park-hero.jpg",
+  heroImageAlt: "Siam Park Tenerife water slide and family splashing in inflatable raft",
+  heroCtaPrimaryText: "BOOK TICKETS NOW",
   heroCtaPrimaryHref: "#tours",
-  heroCtaSecondaryText: "VIEW ALL TICKETS",
-  heroCtaSecondaryHref: "#tours",
+  heroCtaSecondaryText: "VIEW PRICES & OPTIONS",
+  heroCtaSecondaryHref: "#prices",
   showFeaturedTour: true,
   featuredTourId: "siam-park-general-admission-ticket",
   featuredBadgeLabel: "Recommended",

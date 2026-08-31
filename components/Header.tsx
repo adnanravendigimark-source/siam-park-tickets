@@ -13,7 +13,7 @@ export default async function Header() {
     { label: "Blog", href: "/blog" },
     { label: "Contact", href: "/contact" },
   ];
-  const ctaText = header.ctaText || header.bookNowText || "BOOK NOW";
+  const ctaText = header.ctaText || header.bookNowText || "BOOK TICKETS";
   const rawCtaHref = header.ctaHref || "#tours";
   const ctaHref = rawCtaHref.startsWith("#") ? `/${rawCtaHref}` : rawCtaHref;
 
@@ -32,17 +32,17 @@ export default async function Header() {
         <div className="flex items-center gap-3">
           <a
             href={ctaHref}
-            className="hidden items-center gap-2 rounded-lg bg-[#0A3D42] px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white shadow-sm transition-all hover:bg-[#0E7C86] hover:shadow-md md:inline-flex"
+            className="hidden items-center gap-2 rounded-xl bg-[#EB5A28] px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white shadow-md shadow-[#EB5A28]/25 transition-all duration-300 hover:bg-[#D94917] hover:shadow-lg hover:-translate-y-0.5 md:inline-flex"
           >
             {/* Ticket Icon */}
             <svg
               viewBox="0 0 24 24"
               fill="none"
-              stroke="#F0A93A"
+              stroke="currentColor"
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="h-4 w-4 shrink-0"
+              className="h-4 w-4 shrink-0 text-white/90"
             >
               <rect x="3" y="6" width="18" height="12" rx="2" />
               <path d="M9 6v12M15 6v12" strokeDasharray="2 2" />
@@ -55,3 +55,4 @@ export default async function Header() {
     </StickyHeader>
   );
 }
+
