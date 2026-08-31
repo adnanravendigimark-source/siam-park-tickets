@@ -32,7 +32,7 @@ export default async function Header() {
         <div className="flex items-center gap-3">
           <a
             href={ctaHref}
-            className="hidden items-center gap-2 rounded-xl bg-[#EB5A28] px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white shadow-md shadow-[#EB5A28]/25 transition-all duration-300 hover:bg-[#D94917] hover:shadow-lg hover:-translate-y-0.5 md:inline-flex"
+            className="hidden items-center gap-2 rounded-xl bg-[#F15A24] px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white shadow-md shadow-[#F15A24]/25 transition-all duration-300 hover:bg-[#D94612] hover:shadow-lg hover:-translate-y-0.5 md:inline-flex"
           >
             {/* Ticket Icon */}
             <svg

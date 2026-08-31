@@ -80,44 +80,44 @@ export default function TourCard({
 
         {/* Footer pinned to the bottom of the card regardless of content above */}
         {recommended ? (
-          <div className="mt-auto border-t border-[#F0A93A]/20 pt-4">
+          <div className="mt-auto border-t border-[#F15A24]/20 pt-4">
             <div className="flex items-end justify-between gap-2">
               <div>
-                <p className="text-[11px] uppercase tracking-wide text-stone-900/40">from</p>
-                <span className="font-display text-2xl font-bold text-stone-900">${tour.price}</span>
+                <p className="text-[11px] uppercase tracking-wide text-[#102A43]/50">from</p>
+                <span className="font-display text-2xl font-bold text-[#102A43]">${tour.price}</span>
               </div>
               <a
                 href={tour.href}
                 target="_blank"
                 rel="noopener nofollow sponsored"
-                className="flex shrink-0 items-center gap-1.5 rounded-lg bg-[#0A3D42] px-5 py-2.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-white shadow-md shadow-[#0A3D42]/20 transition-all duration-300 hover:bg-[#0E7C86] hover:scale-[1.02]"
+                className="flex shrink-0 items-center gap-1.5 rounded-xl bg-[#F15A24] px-5 py-2.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-white shadow-md shadow-[#F15A24]/25 transition-all duration-300 hover:bg-[#D94612] hover:scale-[1.02]"
               >
                 {bookNowText}
               </a>
             </div>
             {recommended.urgencyText && (
-              <p className="mt-2.5 flex items-center gap-1 text-[11px] font-semibold text-[#F0A93A]">
+              <p className="mt-2.5 flex items-center gap-1 text-[11px] font-semibold text-[#F15A24]">
                 <LockIcon className="h-3 w-3" /> {recommended.urgencyText}
               </p>
             )}
           </div>
         ) : (
-          <div className="mt-auto flex items-end justify-between border-t border-stone-900/8 pt-5">
+          <div className="mt-auto flex items-end justify-between border-t border-[#102A43]/8 pt-5">
             <div>
-              <p className="text-[11px] uppercase tracking-wide text-stone-900/40">from</p>
+              <p className="text-[11px] uppercase tracking-wide text-[#102A43]/50">from</p>
               <div className="flex items-baseline gap-2">
                 {tour.originalPrice && (
-                  <span className="text-sm text-stone-900/35 line-through">${tour.originalPrice}</span>
+                  <span className="text-sm text-[#102A43]/40 line-through">${tour.originalPrice}</span>
                 )}
-                <span className="font-display text-2xl font-bold text-stone-900">${tour.price}</span>
-                <span className="text-xs text-stone-900/45">/ person</span>
+                <span className="font-display text-2xl font-bold text-[#102A43]">${tour.price}</span>
+                <span className="text-xs text-[#102A43]/50">/ person</span>
               </div>
             </div>
             <a
               href={tour.href}
               target="_blank"
               rel="noopener nofollow sponsored"
-              className="rounded-lg bg-[#0A3D42] px-5 py-2.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-white shadow-md shadow-[#0A3D42]/20 transition-all duration-300 hover:bg-[#0E7C86] hover:scale-[1.02]"
+              className="rounded-xl bg-[#07575B] px-5 py-2.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-white shadow-md shadow-[#07575B]/20 transition-all duration-300 hover:bg-[#08A6A6] hover:scale-[1.02]"
             >
               {bookNowText}
             </a>

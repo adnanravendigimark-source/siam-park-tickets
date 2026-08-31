@@ -19,28 +19,21 @@ html {
 }
 
 body {
-  background-color: #F5FAF9;
-  color: #0A3D42;
+  background-color: #FFFFFF;
+  color: #102A43;
 }
 
-/* Default brand-color CSS variables — space-separated RGB triplets */
-/* Color values below are Siam Park Tickets' own Lagoon Turquoise/Sunset
-   Gold tropical palette. The underlying CSS variable and Tailwind class
-   names still say "maya-*"/"chichen-*" (a leftover from the Chichen Itza
-   repo this project was cloned from) — renaming those identifiers across
-   50+ component files would be a purely cosmetic, zero-visual-effect
-   change, so it was left for a follow-up pass; every color a visitor
-   actually sees comes from the values here. */
+/* Brand-color CSS variables — Tropical Thai Adventure palette */
 :root {
-  --color-maya-forest: 10 61 66; /* #0A3D42 - Deep Ocean Teal ⭐ */
-  --color-maya-jungle: 18 135 143; /* #12878F - Lagoon Green */
-  --color-maya-ivory: 245 250 249; /* #F5FAF9 - Sea Foam Ivory */
-  --color-maya-gold: 240 169 58; /* #F0A93A - Sun Gold ⭐ */
-  --color-maya-charcoal: 10 61 66; /* #0A3D42 - Deep Ocean Teal */
-  --color-gold-400: 242 101 60; /* #F2653C - lighter coral accent */
+  --color-maya-forest: 7 87 91; /* #07575B - Deep Teal ⭐ */
+  --color-maya-jungle: 8 166 166; /* #08A6A6 - Ocean Turquoise ⭐ */
+  --color-maya-ivory: 227 245 243; /* #E3F5F3 - Soft Aqua */
+  --color-maya-gold: 241 90 36; /* #F15A24 - Siam Orange ⭐ */
+  --color-maya-charcoal: 16 42 67; /* #102A43 - Deep Navy */
+  --color-gold-400: 232 184 74; /* #E8B84A - Golden Sand */
 
   /* Compatibility aliases */
-  --color-maya-emerald: 14 124 134; /* #0E7C86 - Lagoon Turquoise ⭐ (main brand/CTA color) */
+  --color-maya-emerald: 8 166 166; /* #08A6A6 - Ocean Turquoise ⭐ */
   --color-chichen-navy: var(--color-maya-forest);
   --color-chichen-gold: var(--color-maya-gold);
   --color-chichen-charcoal: var(--color-maya-charcoal);
@@ -52,7 +45,7 @@ body {
 .rich-content h3 {
   font-family: var(--font-display), Georgia, ui-serif, serif;
   font-weight: 600;
-  color: #0A3D42;
+  color: #102A43;
   margin-top: 1em;
   margin-bottom: 0.4em;
   scroll-margin-top: 6rem;

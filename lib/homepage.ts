@@ -267,10 +267,10 @@ export const DEFAULT_FOOTER: FooterContent = {
 };
 
 export const DEFAULT_THEME: ThemeColors = {
-  primary: "#F0A93A",   // Sun Gold ⭐
-  secondary: "#0E7C86", // Lagoon Turquoise ⭐
-  dark: "#0A3D42",      // Deep Ocean Teal
-  accent: "#F2653C",    // Sunset Coral
+  primary: "#F15A24",   // Siam Orange ⭐
+  secondary: "#08A6A6", // Ocean Turquoise ⭐
+  dark: "#07575B",      // Deep Teal ⭐
+  accent: "#E8B84A",    // Golden Sand
 };
 
 export const DEFAULT_SECTIONS: HomepageSections = {
