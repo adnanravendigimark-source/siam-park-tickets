@@ -1,0 +1,54 @@
+{
+  "title": "Privacy Policy",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "<p>Siam Park Tickets (\"we\", \"our\", or \"us\") respects your privacy and is committed to protecting your personal data. This privacy policy explains how we collect, use, disclose, and safeguard your information when you visit our website.</p>"
+    },
+    {
+      "type": "heading",
+      "text": "1. Information We Collect",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "<p>We may collect personal identification information from users in various ways, including, but not limited to, when users visit our site, fill out a contact form, and in connection with other activities, services, features, or resources we make available on our site. Users may be asked for their name and email address as appropriate.</p>"
+    },
+    {
+      "type": "heading",
+      "text": "2. Affiliate Links and Third-Party Services",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "<p>Our website contains affiliate links to third-party booking partners, including GetYourGuide. When you click on an affiliate link and make a purchase, we may receive a small commission at no additional cost to you. These third-party sites have separate and independent privacy policies. We therefore have no responsibility or liability for the content and activities of these linked sites.</p>"
+    },
+    {
+      "type": "heading",
+      "text": "3. Cookies and Analytics",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "<p>We may use cookies and web analytics (such as Google Analytics) to improve user experience, analyze site traffic, and understand how visitors interact with our content. You can choose to set your web browser to refuse cookies or to alert you when cookies are being sent.</p>"
+    },
+    {
+      "type": "heading",
+      "text": "4. How We Use Collected Information",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "<p>We may use the information we collect to improve customer service, optimize website performance, respond to inquiries and questions, and enhance the relevance of our ticket comparisons and travel guides.</p>"
+    },
+    {
+      "type": "heading",
+      "text": "5. Contact Us",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "<p>If you have any questions about this Privacy Policy or our practices regarding your personal data, please contact us via our <a href=\"/contact\">contact page</a>.</p>"
+    }
+  ]
+}

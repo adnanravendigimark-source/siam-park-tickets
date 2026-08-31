@@ -1,0 +1,78 @@
+[
+  {
+    "id": "siam-park-general-admission-ticket",
+    "badge": "guided",
+    "ribbon": "Bestseller",
+    "title": "Siam Park General Admission Ticket",
+    "description": "Full-day access to every ride and attraction at Siam Park — Tower of Power, Wave Palace, Mai Thai River and more — with instant mobile confirmation and no box office queue.",
+    "includes": [
+      "Full-day entry to Siam Park",
+      "Access to all rides and attractions",
+      "Instant mobile e-ticket, nothing to print",
+      "Free cancellation up to 24 hours prior"
+    ],
+    "duration": "Full day",
+    "rating": 4.7,
+    "reviews": 21340,
+    "price": 44,
+    "originalPrice": 52,
+    "image": "https://images.unsplash.com/photo-1544966503-7ba532bcf162?q=80&w=1200&auto=format&fit=crop",
+    "imageAlt": "Guests enjoying the pools and slides at Siam Park water park",
+    "hrefPath": "tenerife-l350/siam-park-entry-tickets-t407436",
+    "hrefExtra": "",
+    "featured": true,
+    "bestFor": "First-time visitors wanting straightforward full-day access at the best price",
+    "priceTableFeature": "No — bring your own towel/lockers extra"
+  },
+  {
+    "id": "siam-park-all-inclusive-ticket",
+    "badge": "guided",
+    "ribbon": "Best Value",
+    "title": "Siam Park All-Inclusive Ticket with Fast Track, Lunch, Drinks & Towel",
+    "description": "Skip the slide queues with a Fast Track pass, refuel with included lunch and drinks, and relax with a towel and locker included — the most convenient way to spend a full day at Siam Park.",
+    "includes": [
+      "Full-day entry to Siam Park",
+      "Fast Track pass — priority access at participating slides",
+      "Lunch and drinks included",
+      "Towel and locker rental included",
+      "Free cancellation up to 24 hours prior"
+    ],
+    "duration": "Full day",
+    "rating": 4.8,
+    "reviews": 6570,
+    "price": 79,
+    "originalPrice": 95,
+    "image": "https://images.unsplash.com/photo-1530549387789-4c1017266635?q=80&w=1200&auto=format&fit=crop",
+    "imageAlt": "A tropical water slide tower at a Thai-inspired water park",
+    "hrefPath": "tenerife-l350/tenerife-siam-park-ticket-with-lunch-drinks-and-towel-t494421",
+    "hrefExtra": "",
+    "featured": true,
+    "bestFor": "Visitors who want to skip the slide queues and not worry about food, drinks, or a towel",
+    "priceTableFeature": "Yes — fast track, lunch, drinks & towel included"
+  },
+  {
+    "id": "siam-park-loro-parque-twin-ticket",
+    "badge": "combo",
+    "ribbon": "2 Parks, 1 Ticket",
+    "title": "Siam Park & Loro Parque Twin Ticket — 2 Attractions",
+    "description": "One ticket, two of Tenerife's best-known attractions — combine a day at Siam Park's water rides with a visit to Loro Parque's animal park, valid across separate visits.",
+    "includes": [
+      "Full-day entry to Siam Park",
+      "Full-day entry to Loro Parque",
+      "Instant mobile e-ticket, nothing to print",
+      "Free cancellation up to 24 hours prior"
+    ],
+    "duration": "2 separate full-day visits",
+    "rating": 4.6,
+    "reviews": 3120,
+    "price": 79,
+    "originalPrice": 92,
+    "image": "https://images.unsplash.com/photo-1583212292454-1fe6229603b7?q=80&w=1200&auto=format&fit=crop",
+    "imageAlt": "Tropical parrots at Loro Parque, Tenerife",
+    "hrefPath": "tenerife-l350/loro-parque-siam-park-1-ticket-2-attractions-t407438",
+    "hrefExtra": "",
+    "featured": false,
+    "bestFor": "Visitors wanting to see both of Tenerife's top attractions on one trip",
+    "priceTableFeature": "No — separate visits to each park"
+  }
+]
