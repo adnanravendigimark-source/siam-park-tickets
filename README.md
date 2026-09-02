@@ -78,13 +78,12 @@ photos of the actual experience.
 
 ## 6. Before you launch
 
-A few placeholders need your own real values before this goes live:
-
-- `lib/site.ts` → `SITE_URL` — set to whatever domain you actually connect
-  in Vercel (currently set to `siamparktickets.com`).
-- `app/layout.tsx` → the `G-XXXXXXXXXX` Google Analytics ID (two spots) —
-  replace with this site's own GA4 measurement ID. Don't reuse another
-  site's ID, or you'll mix both sites' traffic together.
+- `lib/site.ts` → `SITE_URL` is set to `https://www.tenerifewaterparktickets.com`.
+  If the connected domain in Vercel ever changes, update it here.
+- `app/layout.tsx` → the Google tag (gtag.js) is already wired up with this
+  site's own GA4 measurement ID (`G-PCW9CR86GD`). Don't add a second Google
+  tag anywhere else, and don't reuse another site's ID, or you'll mix both
+  sites' traffic together.
 - `.env` → `ADMIN_EMAIL` / `ADMIN_PASSWORD` / `ADMIN_SESSION_SECRET` /
   `DATABASE_URL` / `GYG_PARTNER_ID` (see the comments in that file).
 

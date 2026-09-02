@@ -7,6 +7,7 @@ import ImageUploadField from "./ImageUploadField";
 import RichTextEditor from "./RichTextEditor";
 import RepeatableList from "./RepeatableList";
 import SeoPreview from "./SeoPreview";
+import { SITE_URL } from "@/lib/site";
 import CharCounter from "./CharCounter";
 import ColorField from "./ColorField";
 import SaveBar from "./SaveBar";
@@ -1131,7 +1132,7 @@ export default function HomepageForm({ initial, tours }: { initial: HomepageCont
                 )}
               </div>
               <div className="bg-stone-50 p-3">
-                <p className="truncate text-xs uppercase tracking-wide text-stone-400">siamparktickets.com</p>
+                <p className="truncate text-xs uppercase tracking-wide text-stone-400">{SITE_URL.replace(/^https?:\/\//, "")}</p>
                 <p className="mt-0.5 truncate text-sm font-semibold text-stone-900">{content.ogTitle || content.metaTitle || content.heroHeading}</p>
                 <p className="mt-0.5 line-clamp-2 text-xs text-stone-500">{(content.ogDescription || content.metaDescription || content.heroSubheading).replace(/<[^>]+>/g, "")}</p>
               </div>
