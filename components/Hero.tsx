@@ -10,9 +10,11 @@ export default async function Hero() {
   // Clean heading so "Tickets" is exclusively the script line underneath
   const rawHeading = content.heroHeading || "Siam Park";
   const mainHeading = rawHeading.replace(/\s+tickets$/i, "");
-  const eyebrowBadge = content.heroBadge === "TENERIFE'S #1 WATER PARK EXPERIENCE" || !content.heroBadge
-    ? "THE WORLD'S BEST WATER PARK"
-    : content.heroBadge;
+  // Admin-editable (Homepage → Content → Hero → "Hero badge"). Previously
+  // this silently swapped out one specific legacy string for a hardcoded
+  // replacement, so an admin who genuinely saved that exact text would
+  // never see their own words rendered.
+  const eyebrowBadge = content.heroBadge || "THE WORLD'S BEST WATER PARK";
 
   const heroSection = content.sections?.hero || {
     tagline: "Feel the Thrill. Live the Adventure.",

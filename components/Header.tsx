@@ -7,12 +7,17 @@ import { getHomepageContent } from "@/lib/homepage";
 export default async function Header() {
   const content = await getHomepageContent();
   const header = content.header;
-  const navLinks = [
-    { label: "Home", href: "/" },
-    { label: "About Us", href: "/about" },
-    { label: "Blog", href: "/blog" },
-    { label: "Contact", href: "/contact" },
-  ];
+  // Admin-editable (Homepage → Content → Navbar → "Nav links"). Falls back
+  // to a sane default set only if the admin has never saved any (e.g. a
+  // fresh DB row before the first save), so the header is never empty.
+  const navLinks = header.navLinks?.length
+    ? header.navLinks
+    : [
+        { label: "Home", href: "/" },
+        { label: "About Us", href: "/about" },
+        { label: "Blog", href: "/blog" },
+        { label: "Contact", href: "/contact" },
+      ];
   const ctaText = header.ctaText || header.bookNowText || "BOOK TICKETS";
   const rawCtaHref = header.ctaHref || "#tours";
   const ctaHref = rawCtaHref.startsWith("#") ? `/${rawCtaHref}` : rawCtaHref;

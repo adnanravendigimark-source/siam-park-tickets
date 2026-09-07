@@ -14,7 +14,11 @@ export default function HeaderNav({ links }: { links?: NavLink[] }) {
     { label: "Contact", href: "/contact" },
   ];
 
-  const navLinks = links && links.length === 4 ? links : defaultLinks;
+  // Renders whatever the admin has saved (Homepage → Content → Navbar),
+  // however many links that is — previously this only accepted an admin
+  // list of exactly 4 links and silently discarded any other count back to
+  // the hardcoded default, which is why nav edits appeared to do nothing.
+  const navLinks = links && links.length > 0 ? links : defaultLinks;
 
   return (
     <nav className="hidden items-center gap-8 md:flex">
