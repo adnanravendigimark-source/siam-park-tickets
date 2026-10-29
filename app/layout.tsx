@@ -6,7 +6,6 @@ import { getSiteChrome } from "@/lib/homepage";
 import { hexToRgbTriplet } from "@/lib/color";
 import "./globals.css";
 
-export const dynamic = "force-dynamic";
 
 const displayFont = Cormorant_Garamond({
   subsets: ["latin"],

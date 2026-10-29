@@ -21,7 +21,6 @@ import { extractTableOfContents } from "@/lib/tableOfContents";
 // its own hand-built page file (the 3 original launch articles do, for
 // slightly more custom keyword targeting in their metadata — new posts
 // added later are served here automatically).
-export const dynamic = "force-dynamic";
 
 // Blog-only font pairing, matching the amsterdam-boat-tours article page —
 // Outfit for headings, Plus Jakarta Sans for body copy. Loaded here (rather
@@ -38,6 +37,14 @@ const blogBodyFont = Plus_Jakarta_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
+
+// Empty list = nothing prebuilt at deploy time; each page is rendered on its
+// first request, then served from cache until an admin save purges it.
+// Without this export Next 14 renders the route dynamically (a Neon query on
+// every hit).
+export async function generateStaticParams() {
+  return [];
+}
 
 export async function generateMetadata({
   params,

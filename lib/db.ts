@@ -19,9 +19,7 @@ let client: NeonClient | null = null;
 try {
   const dbUrl = process.env.DATABASE_URL?.trim();
   if (dbUrl && (dbUrl.startsWith("postgres://") || dbUrl.startsWith("postgresql://"))) {
-    client = neon<false, false>(dbUrl, {
-      fetchOptions: { cache: "no-store" },
-    });
+    client = neon<false, false>(dbUrl);
   }
 } catch (e) {
   console.warn("[db] Failed to initialize Neon client:", e);
